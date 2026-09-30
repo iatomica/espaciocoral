@@ -97,9 +97,9 @@ export const Hero = () => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group">
               <img
-                src="/images/eco-flyer.png"
+                src="/images/eco-hero-smile.webp"
                 alt="Odontología Eco - Cuidar tu sonrisa y el planeta es amor propio"
-                className="w-full h-[400px] sm:h-[480px] object-cover object-top transition-transform duration-700 group-hover:scale-102"
+                className="w-full h-[400px] sm:h-[480px] object-cover object-center transition-transform duration-700 group-hover:scale-102"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
 

@@ -26,7 +26,7 @@ export const AboutDoctor = () => {
               {/* Main Visual: Patient Before and After */}
               <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
                 <img
-                  src="/images/eco-patient-before-after.png"
+                  src="/images/eco-patient-before-after.webp"
                   alt="Transformación de sonrisa - Odontología Eco San Telmo"
                   className="w-full h-auto object-cover object-center"
                 />
