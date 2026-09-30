@@ -3,18 +3,28 @@
 @theme {
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
-  --color-coral-primary: #0C7C7B;
-  --color-coral-dark: #074E4E;
-  --color-coral-accent: #F26A51;
-  --color-coral-accent-hover: #E2583E;
-  --color-coral-soft: #F0FDFA;
-  --color-coral-warm: #FFF5F2;
+
+  /* Odontología Eco - Palette */
+  --color-eco-green: #6DA02E;
+  --color-eco-green-dark: #4C721D;
+  --color-eco-green-deep: #1B2F13;
+  --color-eco-green-light: #8EC44A;
+  --color-eco-green-soft: #F2F8EB;
+  --color-eco-green-mist: #E5EFDB;
+
+  --color-eco-lavender: #865AA5;
+  --color-eco-lavender-dark: #6D438A;
+  --color-eco-lavender-soft: #F6EFFB;
+  --color-eco-lavender-light: #A57DC4;
+
+  --color-eco-bg: #F9FAF6;
+  --color-eco-card: #FFFFFF;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: #F8FAFC;
-  color: #0F172A;
+  background-color: #F9FAF6;
+  color: #1E293B;
   overflow-x: hidden;
 }
 
@@ -28,14 +38,14 @@ h1, h2, h3, h4, .font-display {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #F1F5E9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #94A3B8;
+  background: #B6CDA1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0C7C7B;
+  background: #6DA02E;
 }
 
 /* Tactile micro-interactions */

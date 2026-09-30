@@ -1,6 +1,5 @@
 import { REVIEWS, CLINIC_INFO, getWhatsAppUrl } from '../data/clinicData';
-import { Star, CheckCircle } from 'lucide-react';
-
+import { Star, CheckCircle, MessageCircle } from 'lucide-react';
 
 export const ReviewsSection = () => {
   return (
@@ -12,19 +11,19 @@ export const ReviewsSection = () => {
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-xs font-bold text-amber-800 uppercase tracking-wider mb-2.5">
               <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-              <span>Valoración Perfecta 5.0 en Google</span>
+              <span>Calificación 5.0 en Google</span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               La experiencia de nuestros pacientes
             </h2>
             <p className="text-slate-600 text-base mt-2 max-w-xl">
-              Más de 75 personas compartieron su experiencia destacando el trato humano, la precisión clínica y la puntualidad del Dr. Juan Pablo Dorrego.
+              Historias reales de personas que confiaron su sonrisa a Odontología Eco en San Telmo, destacando la calidez, la puntualidad y los tratamientos sin dolor.
             </p>
           </div>
 
-          <div className="bg-[#F0FDFA] p-4 rounded-2xl border border-teal-100 flex items-center gap-4">
-            <div className="text-center pr-4 border-r border-teal-200/60">
-              <p className="font-display text-3xl font-extrabold text-[#0C7C7B]">5.0</p>
+          <div className="bg-[#F2F8EB] p-4 rounded-2xl border border-[#D5E6C6] flex items-center gap-4">
+            <div className="text-center pr-4 border-r border-[#D5E6C6]">
+              <p className="font-display text-3xl font-extrabold text-[#4C721D]">5.0</p>
               <div className="flex items-center text-amber-400 justify-center">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-3 h-3 fill-amber-400" />
@@ -43,7 +42,7 @@ export const ReviewsSection = () => {
           {REVIEWS.map((review) => (
             <div
               key={review.id}
-              className="p-6 rounded-3xl bg-[#F8FAFC] border border-slate-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
+              className="p-6 rounded-3xl bg-[#F9FAF6] border border-slate-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -66,7 +65,7 @@ export const ReviewsSection = () => {
                     <span>{review.name}</span>
                     <CheckCircle className="w-3.5 h-3.5 text-emerald-500" />
                   </h4>
-                  <span className="text-[10px] font-medium text-[#0C7C7B]">
+                  <span className="text-[10px] font-medium text-[#6DA02E]">
                     {review.treatment}
                   </span>
                 </div>
@@ -76,13 +75,13 @@ export const ReviewsSection = () => {
         </div>
 
         {/* CTA Banner */}
-        <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#0C7C7B] to-[#074E4E] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+        <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#4C721D] to-[#1B2F13] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
           <div>
             <h3 className="font-display text-xl sm:text-2xl font-bold">
               ¿Querés vivir una experiencia odontológica diferente?
             </h3>
-            <p className="text-teal-100 text-xs sm:text-sm mt-1">
-              Agendá tu consulta en Torre Coral State y conocé nuestro enfoque sin dolor.
+            <p className="text-[#D7E8C7] text-xs sm:text-sm mt-1">
+              Agendá tu consulta en San Telmo y conocé nuestro enfoque ecológico y sin dolor.
             </p>
           </div>
 
@@ -90,8 +89,9 @@ export const ReviewsSection = () => {
             href={getWhatsAppUrl('Solicitud de turno')}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-tactile whitespace-nowrap bg-white hover:bg-teal-50 text-[#0C7C7B] font-bold text-sm px-6 py-3.5 rounded-full shadow-md transition-all"
+            className="btn-tactile whitespace-nowrap bg-white hover:bg-[#F2F8EB] text-[#4C721D] font-bold text-sm px-6 py-3.5 rounded-full shadow-md transition-all cursor-pointer flex items-center gap-2"
           >
+            <MessageCircle className="w-4 h-4 text-[#6DA02E]" />
             <span>Reservar Turno por WhatsApp</span>
           </a>
         </div>

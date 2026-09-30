@@ -13,7 +13,7 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export function App() {
   return (
-    <div className="min-h-[100dvh] flex flex-col bg-[#F8FAFC] text-slate-800 antialiased selection:bg-[#0C7C7B] selection:text-white">
+    <div className="min-h-[100dvh] flex flex-col bg-[#F9FAF6] text-slate-800 antialiased selection:bg-[#6DA02E] selection:text-white">
       <AnnouncementBar />
       <Navbar />
       <main className="flex-1">

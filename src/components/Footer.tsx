@@ -1,49 +1,49 @@
 import { CLINIC_INFO, getWhatsAppUrl, SPECIALTIES } from '../data/clinicData';
-import { MessageCircle, Star } from 'lucide-react';
+import { MessageCircle, Star, MapPin, Globe, Leaf } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#062E2E] text-slate-300 pt-16 pb-12 border-t border-teal-900/60">
+    <footer className="bg-[#172911] text-[#D7E8C7] pt-16 pb-12 border-t border-[#263F1D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-teal-900/50">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#2C4822]">
           
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
               <img
                 src="/images/logo.svg"
-                alt="Espacio Coral Odontología"
+                alt="Odontología Eco San Telmo"
                 className="h-10 w-auto object-contain brightness-125"
               />
             </div>
             
-            <p className="text-xs sm:text-sm text-teal-100/70 leading-relaxed pr-4">
-              Consultorio odontológico de alta gama en Torre Coral State, Córdoba. Más de 15 años de trayectoria a cargo del <strong>Dr. Juan Pablo Dorrego</strong>, ofreciendo tratamientos integrales de vanguardia y calidez humana.
+            <p className="text-xs sm:text-sm text-[#C8DCB6] leading-relaxed pr-4">
+              {CLINIC_INFO.slogan}. Consultorio odontológico integral de alta gama en San Telmo, enfocado en biomateriales, sustentabilidad, cero dolor y calidez humana.
             </p>
+
+            <div className="space-y-1.5 text-xs text-[#BED4AA]">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-[#8EC44A]" />
+                <span>{CLINIC_INFO.address}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Globe className="w-3.5 h-3.5 text-[#A57DC4]" />
+                <a href={CLINIC_INFO.website} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">
+                  {CLINIC_INFO.website}
+                </a>
+              </div>
+            </div>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <a
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#0C7C7B] hover:bg-[#0E8A85] text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 bg-[#6DA02E] hover:bg-[#578323] text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-400" />
+                <MessageCircle className="w-4 h-4 text-[#E6FFC2]" />
                 <span>WhatsApp: {CLINIC_INFO.phoneDisplay}</span>
-              </a>
-
-              <a
-                href={CLINIC_INFO.facebookUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-xl bg-teal-900/60 hover:bg-teal-800 text-teal-200 transition-colors"
-                title="Página de Facebook"
-                aria-label="Facebook Dr. Dorrego"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
               </a>
             </div>
           </div>
@@ -54,20 +54,20 @@ export const Footer = () => {
             <h4 className="font-display font-bold text-sm text-white uppercase tracking-wider">
               Navegación
             </h4>
-            <ul className="space-y-2 text-xs sm:text-sm text-teal-100/70">
+            <ul className="space-y-2 text-xs sm:text-sm text-[#BED4AA]">
               <li>
                 <a href="#especialidades" className="hover:text-white transition-colors">
                   Especialidades & Tratamientos
                 </a>
               </li>
               <li>
-                <a href="#doctor" className="hover:text-white transition-colors">
-                  Dr. Juan Pablo Dorrego
+                <a href="#filosofia-eco" className="hover:text-white transition-colors">
+                  Filosofía Eco & Resultados
                 </a>
               </li>
               <li>
                 <a href="#obras-sociales" className="hover:text-white transition-colors">
-                  Obras Sociales & Prepagas
+                  Coberturas & Prepagas
                 </a>
               </li>
               <li>
@@ -77,7 +77,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a href="#ubicacion" className="hover:text-white transition-colors">
-                  Torre Coral State (Piso 11 H)
+                  San Telmo (Estados Unidos 693)
                 </a>
               </li>
             </ul>
@@ -88,14 +88,14 @@ export const Footer = () => {
             <h4 className="font-display font-bold text-sm text-white uppercase tracking-wider">
               Tratamientos Principales
             </h4>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs text-teal-100/70">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs text-[#BED4AA]">
               {SPECIALTIES.map((spec) => (
                 <a
                   key={spec.id}
                   href={getWhatsAppUrl(spec.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-teal-200 transition-colors truncate"
+                  className="hover:text-white transition-colors truncate"
                   title={spec.title}
                 >
                   &bull; {spec.title}
@@ -103,18 +103,24 @@ export const Footer = () => {
               ))}
             </div>
 
-            <div className="pt-3 border-t border-teal-900/60 text-xs text-teal-200/90 flex items-center gap-1.5">
-              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-              <span>Calificación Google: <strong>5.0 / 5.0</strong> ({CLINIC_INFO.reviewCount} reseñas)</span>
+            <div className="pt-3 border-t border-[#2C4822] text-xs text-[#D9ECD0] flex items-center justify-between">
+              <div className="flex items-center gap-1.5">
+                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                <span>Calificación Google: <strong>5.0 / 5.0</strong> ({CLINIC_INFO.reviewCount} reseñas)</span>
+              </div>
+              <div className="flex items-center gap-1 text-[#8EC44A]">
+                <Leaf className="w-3.5 h-3.5" />
+                <span className="text-[11px] font-semibold">Odontología Eco</span>
+              </div>
             </div>
           </div>
 
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-teal-200/60 gap-4">
-          <p>&copy; {new Date().getFullYear()} Espacio Coral Odontología. Todos los derechos reservados.</p>
-          <p>Coral State Loft In Tower · Blvr. Mitre 517 11 H, Córdoba</p>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#9BB784] gap-4">
+          <p>&copy; {new Date().getFullYear()} Odontología Eco San Telmo. Todos los derechos reservados.</p>
+          <p>Estados Unidos 693 · San Telmo, Ciudad Autónoma de Buenos Aires</p>
         </div>
 
       </div>

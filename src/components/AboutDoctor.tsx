@@ -1,58 +1,53 @@
 import { CLINIC_INFO, getWhatsAppUrl } from '../data/clinicData';
-import { Award, CheckCircle2, MessageCircle, ExternalLink } from 'lucide-react';
-
+import { Leaf, CheckCircle2, MessageCircle, Heart, Sparkles, ShieldCheck } from 'lucide-react';
 
 export const AboutDoctor = () => {
   return (
-    <section id="doctor" className="py-16 sm:py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="filosofia-eco" className="py-16 sm:py-24 bg-white relative overflow-hidden">
+      {/* Decorative background blurs */}
+      <div className="absolute top-1/2 left-0 w-72 h-72 bg-[#6DA02E]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#865AA5]/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Column: Dr. Dorrego 3D Figurine & Real Doctor Verification Badge */}
+          {/* Left Column: Real Patient Transformation Case Showcase */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-slate-50 bg-gradient-to-b from-[#FFF5F2] via-white to-[#F0FDFA]">
+            <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-[#F2F8EB] bg-gradient-to-b from-[#F6EFFB]/40 via-white to-[#F2F8EB]/50 p-4 sm:p-6">
               
-              {/* Main Visual: Dr. Dorrego in 3D Clay Toy Figurine Style */}
-              <div className="relative flex justify-center items-center pt-6 pb-2 px-6">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#865AA5] bg-[#F6EFFB] px-3 py-1 rounded-full border border-[#E9DFEF] flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5" /> Caso Clínico Real
+                </span>
+                <span className="text-xs font-semibold text-slate-500">Antes & Después</span>
+              </div>
+
+              {/* Main Visual: Patient Before and After */}
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
                 <img
-                  src="/images/dr-dorrego-3d.webp"
-                  alt="Dr. Juan Pablo Dorrego"
-                  className="w-auto h-[380px] sm:h-[440px] object-contain drop-shadow-xl transition-transform hover:scale-105 duration-300"
+                  src="/images/eco-patient-before-after.png"
+                  alt="Transformación de sonrisa - Odontología Eco San Telmo"
+                  className="w-full h-auto object-cover object-center"
                 />
               </div>
 
-              {/* Floating Real Doctor Verification Card */}
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-slate-200/90 shadow-lg flex items-center justify-between gap-3">
+              {/* Card Footer: Patient transformation commentary */}
+              <div className="mt-4 p-4 rounded-2xl bg-white border border-[#E1ECD4] shadow-xs flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="relative">
-                    <img
-                      src="/images/dr-dorrego-real.webp"
-                      alt="Dr. Juan Pablo Dorrego - Foto Real"
-                      className="w-13 h-13 rounded-xl object-cover ring-2 ring-[#0C7C7B]/30 shadow-xs"
-                    />
-                    <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center">
-                      <CheckCircle2 className="w-3 h-3 text-white" />
-                    </span>
+                  <div className="w-10 h-10 rounded-xl bg-[#F2F8EB] text-[#6DA02E] flex items-center justify-center shrink-0">
+                    <Heart className="w-5 h-5 fill-[#6DA02E]" />
                   </div>
                   <div>
-                    <div className="flex items-center gap-1.5">
-                      <h4 className="text-sm font-bold text-slate-900">Dr. Juan Pablo Dorrego</h4>
-                      <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#F0FDFA] text-[#0C7C7B] border border-teal-200">
-                        Verificado
-                      </span>
-                    </div>
-                    <p className="text-xs text-slate-600 font-medium mt-0.5">
-                      Director Médico · Odontólogo MP · Córdoba
+                    <h4 className="text-sm font-bold text-slate-900">Sonrisas que transforman vidas</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      Tratamientos conservadores y estéticos con máxima biocompatibilidad
                     </p>
                   </div>
                 </div>
-
-                <div className="hidden sm:block text-right">
-                  <span className="text-[11px] font-bold text-[#F26A51] uppercase tracking-wide block">
-                    Torre Coral State
-                  </span>
-                  <span className="text-[10px] text-slate-500">Piso 11 H</span>
+                <div className="hidden sm:block text-right shrink-0">
+                  <span className="text-xs font-bold text-[#6DA02E] block">San Telmo</span>
+                  <span className="text-[10px] text-slate-400">Estados Unidos 693</span>
                 </div>
               </div>
 
@@ -60,66 +55,66 @@ export const AboutDoctor = () => {
 
             {/* Stats row below image */}
             <div className="grid grid-cols-3 gap-4">
-              <div className="bg-[#F0FDFA] p-4 rounded-2xl border border-teal-100 text-center">
-                <p className="font-display text-2xl sm:text-3xl font-extrabold text-[#0C7C7B]">
+              <div className="bg-[#F2F8EB] p-4 rounded-2xl border border-[#D5E6C6] text-center">
+                <p className="font-display text-2xl sm:text-3xl font-extrabold text-[#4C721D]">
                   {CLINIC_INFO.yearsExperience}
                 </p>
                 <p className="text-xs font-semibold text-slate-600 mt-0.5">Años de Trayectoria</p>
               </div>
 
-              <div className="bg-[#FFF5F2] p-4 rounded-2xl border border-rose-100 text-center">
-                <p className="font-display text-2xl sm:text-3xl font-extrabold text-[#F26A51]">
+              <div className="bg-[#F6EFFB] p-4 rounded-2xl border border-[#E9DFEF] text-center">
+                <p className="font-display text-2xl sm:text-3xl font-extrabold text-[#865AA5]">
                   5.0★
                 </p>
                 <p className="text-xs font-semibold text-slate-600 mt-0.5">{CLINIC_INFO.reviewCount} Reseñas Google</p>
               </div>
 
-              <div className="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 text-center">
+              <div className="bg-[#F9FAF6] p-4 rounded-2xl border border-slate-200 text-center">
                 <p className="font-display text-2xl sm:text-3xl font-extrabold text-slate-800">
                   100%
                 </p>
-                <p className="text-xs font-semibold text-slate-600 mt-0.5">Atención Directa</p>
+                <p className="text-xs font-semibold text-slate-600 mt-0.5">Eco Consciente</p>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Bio & Methodology */}
+          {/* Right Column: Eco Philosophy & Values */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F0FDFA] border border-teal-200 text-xs font-bold text-[#0C7C7B] uppercase tracking-wider">
-              <Award className="w-3.5 h-3.5 text-[#F26A51]" />
-              <span>Dirección Médica</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F2F8EB] border border-[#D5E6C6] text-xs font-bold text-[#4C721D] uppercase tracking-wider">
+              <Leaf className="w-3.5 h-3.5 text-[#6DA02E]" />
+              <span>Nuestra Propuesta de Valor</span>
             </div>
 
             <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Dr. Juan Pablo Dorrego
+              Una nueva forma de vivir tu visita al odontólogo
             </h2>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Con más de 15 años de trayectoria ininterrumpida en Córdoba Capital, el Dr. Dorrego lidera <strong>Espacio Coral Odontología</strong> bajo una premisa fundamental: el paciente nunca es un número. Cada plan de tratamiento integra distintas disciplinas odontológicas para brindar una solución definitiva, mínimamente invasiva y adaptada a tus tiempos.
+              En <strong>Odontología Eco San Telmo</strong> creemos que el cuidado de tu salud no debe estar reñido con el respeto por el medio ambiente ni con una experiencia humana y tranquila. Por eso creamos un modelo odontológico consciente centrado en las personas:
             </p>
 
-            {/* Core Values */}
-            <div className="space-y-3.5 pt-2">
+            {/* Core Values Points */}
+            <div className="space-y-4 pt-2">
               {[
                 {
-                  title: 'Integración de disciplinas',
-                  desc: 'Implantes, ortodoncia, estética y rehabilitación articuladas en una sola visión para evitar retratamientos.'
+                  title: 'Materiales biocompatibles libres de metales',
+                  desc: 'Utilizamos resinas avanzadas y cerámicas puras de zirconio que no liberan sustancias tóxicas y cuidan tus encías a largo plazo.'
                 },
                 {
-                  title: 'Atención personalizada de principio a fin',
-                  desc: 'El Dr. Dorrego realiza personalmente el diagnóstico, la planificación y cada etapa de tu evolución clínica.'
+                  title: 'Reducción activa de la huella plástica',
+                  desc: 'Protocolos de esterilización certificados y sustitución de descartables plásticos por alternativas biodegradables y sostenibles.'
                 },
                 {
-                  title: 'Tecnología y biomateriales de primera línea',
-                  desc: 'Utilizamos implantes certificados, resinas nanohíbridas y cerámicas de alta resistencia.'
+                  title: 'Odontología mínimamente invasiva',
+                  desc: 'Preservamos al máximo el tejido dental biológico natural, realizando tratamientos conservadores y certeros.'
                 },
                 {
-                  title: 'Ambiente de absoluta calma',
-                  desc: 'Instalaciones ubicadas en el piso 11 de la icónica Torre Coral State, con luz natural y ambiente descontracturado.'
+                  title: 'Tiempo y escucha para cada paciente',
+                  desc: 'Turnos espaciados que garantizan atención sin apuros, puntualidad estricta y un ambiente relajado y reconfortante.'
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-teal-100 text-[#0C7C7B] flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-[#EBF5DE] text-[#6DA02E] flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle2 className="w-3.5 h-3.5" />
                   </div>
                   <div>
@@ -133,24 +128,19 @@ export const AboutDoctor = () => {
             {/* CTAs */}
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <a
-                href={getWhatsAppUrl('Consulta con Dr. Dorrego')}
+                href={getWhatsAppUrl('Consulta sobre tratamientos')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-tactile inline-flex items-center gap-2 bg-[#0C7C7B] hover:bg-[#074E4E] text-white font-semibold text-sm px-6 py-3 rounded-xl shadow-md shadow-[#0C7C7B]/20 transition-all"
+                className="btn-tactile inline-flex items-center gap-2 bg-[#6DA02E] hover:bg-[#578323] text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md shadow-[#6DA02E]/20 transition-all cursor-pointer"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-300" />
-                <span>Consultar con el Dr. Dorrego</span>
+                <MessageCircle className="w-4 h-4 text-[#E6FFC2]" />
+                <span>Consultar por WhatsApp ({CLINIC_INFO.phoneDisplay})</span>
               </a>
 
-              <a
-                href={CLINIC_INFO.facebookUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-tactile inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-semibold text-sm px-5 py-3 rounded-xl border border-slate-200 shadow-xs transition-colors"
-              >
-                <span>Perfil de Facebook</span>
-                <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
-              </a>
+              <div className="flex items-center gap-2 text-xs font-semibold text-slate-600">
+                <ShieldCheck className="w-4 h-4 text-[#6DA02E]" />
+                <span>Atención con turno previo</span>
+              </div>
             </div>
 
           </div>

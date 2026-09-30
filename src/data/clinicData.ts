@@ -16,128 +16,166 @@ export interface Review {
   treatment: string;
 }
 
+export interface ValuePillar {
+  id: string;
+  title: string;
+  desc: string;
+  iconName: 'stethoscope' | 'leaf' | 'handshake' | 'book';
+}
+
 export const CLINIC_INFO = {
-  name: 'Espacio Coral Odontología',
-  doctorName: 'Dr. Juan Pablo Dorrego',
-  phoneDisplay: '(0351) 259-8438',
-  phoneRaw: '03512598438',
-  whatsappRaw: '5493512598438',
-  facebookUrl: 'https://www.facebook.com/odontologojuanpablodorrego/',
-  address: 'Coral State Loft In Tower, Blvr. Mitre 517 11 H, X5000 Córdoba',
+  name: 'Odontología Eco San Telmo',
+  brandName: 'Odontología Eco',
+  slogan: 'Cuidar tu sonrisa y el planeta, es amor propio',
+  phoneDisplay: '011 15-5863-3597',
+  phoneRaw: '0111558633597',
+  whatsappRaw: '5491158633597',
+  address: 'Estados Unidos 693, Cdad. Autónoma de Buenos Aires',
+  neighborhood: 'San Telmo, Ciudad Autónoma de Buenos Aires',
+  postalCode: 'C1101AAM',
+  website: 'https://odontologiaeco.com/',
   rating: '5.0',
-  reviewCount: '+75',
-  yearsExperience: '15+',
-  hours: 'Lunes a Viernes de 09:00 a 19:30 hs'
+  reviewCount: '+65',
+  yearsExperience: '12+',
+  hours: 'Lunes a Viernes de 09:00 a 19:00 hs',
+  mapQueryUrl: 'https://maps.google.com/?q=Estados+Unidos+693,+San+Telmo,+Buenos+Aires'
 };
 
+export const VALUE_PILLARS: ValuePillar[] = [
+  {
+    id: 'excelencia',
+    title: 'Excelencia Profesional',
+    desc: 'Odontólogos especializados con formación continua y equipamiento de precisión para diagnósticos rigurosos.',
+    iconName: 'stethoscope'
+  },
+  {
+    id: 'ecologia',
+    title: 'Compromiso Ecológico',
+    desc: 'Odontología sustentable: reducción activa de residuos plásticos, biomateriales y respeto por el medio ambiente.',
+    iconName: 'leaf'
+  },
+  {
+    id: 'atencion',
+    title: 'Atención Personalizada',
+    desc: 'Atención cálida y sin apuros. Evaluamos cada caso de forma integral entendiendo tus tiempos y necesidades.',
+    iconName: 'handshake'
+  },
+  {
+    id: 'educacion',
+    title: 'Educación al Paciente',
+    desc: 'Te explicamos cada paso del tratamiento con total claridad y promovemos hábitos de prevención duraderos.',
+    iconName: 'book'
+  }
+];
+
 export const SPECIALTIES: Specialty[] = [
+  {
+    id: 'estetica',
+    title: 'Estética Dental & Blanqueamiento',
+    subtitle: 'Sonrisas luminosas y armónicas',
+    description: 'Carillas y aclaramiento dental con geles seguros que cuidan tu esmalte y devuelven la luminosidad natural de tus dientes.',
+    image: '/images/coral-estetica.webp',
+    tags: ['Blanqueamiento Seguro', 'Carillas Estéticas', 'Biocompatible']
+  },
+  {
+    id: 'ortodoncia',
+    title: 'Ortodoncia & Alineadores Invisibles',
+    subtitle: 'Alineación moderna y discreta',
+    description: 'Corrección estética y funcional de tu mordida con placas alineadoras transparentes y cómodas para tu rutina diaria.',
+    image: '/images/coral-ortodoncia.webp',
+    tags: ['Alineadores Transparentes', 'Control Oclusal', 'Estética']
+  },
   {
     id: 'implantes',
     title: 'Implantes Odontológicos',
     subtitle: 'Rehabilitación fija y duradera',
-    description: 'Recuperá tus piezas dentales perdidas con implantes de titanio de última generación, máxima fijación y estética natural.',
+    description: 'Recuperá tus piezas dentales con implantes de titanio de máxima pureza biológica, función masticatoria óptima y estética idéntica a tus dientes naturales.',
     image: '/images/coral-implantes.webp',
-    tags: ['Implantes Unitarios', 'Carga Inmediata', 'Regeneración Ósea']
+    tags: ['Implantes Biocompatibles', 'Carga Inmediata', 'Integración Ósea']
   },
   {
-    id: 'ortodoncia',
-    title: 'Ortodoncia & Alineación',
-    subtitle: 'Alineadores invisibles y brackets',
-    description: 'Corrección estética y funcional de la mordida para jóvenes y adultos, con placas alineadoras transparentes de alta comodidad.',
-    image: '/images/coral-ortodoncia.webp',
-    tags: ['Alineadores Transparentes', 'Brackets Zafiro', 'Control Oclusal']
-  },
-  {
-    id: 'blanqueamiento',
-    title: 'Blanqueamiento Dental & Estética',
-    subtitle: 'Sonrisas brillantes y armónicas',
-    description: 'Procedimientos de aclaramiento dental en consultorio y carillas cerámicas diseñadas para devolver la luminosidad a tu sonrisa.',
-    image: '/images/coral-estetica.webp',
-    tags: ['Aclaramiento LED', 'Carillas Estéticas', 'Microabrasión']
+    id: 'protesis',
+    title: 'Rehabilitación & Prótesis Libres de Metal',
+    subtitle: 'Zirconio y cerámicas puras',
+    description: 'Coronas, incrustaciones y puentes diseñados con materiales de alta estética que respetan tus encías y no generan toxicidad.',
+    image: '/images/coral-protesis.webp',
+    tags: ['Coronas en Zirconio', 'Libre de Metal', 'Armonía Gingival']
   },
   {
     id: 'endodoncia',
-    title: 'Endodoncia Mecanizada',
-    subtitle: 'Salvamos tus piezas dentales sin dolor',
-    description: 'Tratamiento de conductos radiculares con instrumental rotatorio digital de precisión, reduciendo tiempos y eliminando molestias.',
+    title: 'Endodoncia Mecanizada sin dolor',
+    subtitle: 'Salvamos tus piezas dentales',
+    description: 'Tratamiento de conductos con instrumental rotatorio digital de última tecnología, reduciendo tiempos clínicos al mínimo.',
     image: '/images/coral-tech.webp',
-    tags: ['Tratamiento de Conducto', 'Localizador Apical', 'Sin Dolor']
+    tags: ['Tratamiento de Conducto', 'Localizador Digital', 'Sin Dolor']
+  },
+  {
+    id: 'periodoncia',
+    title: 'Periodoncia & Profilaxis Consciente',
+    subtitle: 'Salud de encías y prevención',
+    description: 'Limpiezas ultrasónicas no invasivas y tratamiento de gingivitis para mantener las bases de tu sonrisa firmes y saludables.',
+    image: '/images/coral-periodoncia.webp',
+    tags: ['Limpieza Ultrasónica', 'Cuidado de Encías', 'Prevención']
   },
   {
     id: 'cirugia',
-    title: 'Cirugía Odontológica',
-    subtitle: 'Intervenciones ambulatorias seguras',
-    description: 'Extracción de terceros molares (muelas de juicio), apicectomías y remodelación gingival con anestesia de última generación.',
+    title: 'Cirugía Odontológica Menor',
+    subtitle: 'Extracciones atraumáticas y seguras',
+    description: 'Extracción de muelas de juicio y procedimientos gingivales con anestesia localizada de efecto prolongado y excelente postoperatorio.',
     image: '/images/coral-cirugia.webp',
-    tags: ['Muelas de Juicio', 'Cirugía Menor', 'Postoperatorio Cómodo']
+    tags: ['Muelas de Juicio', 'Técnica Atraumática', 'Rápida Recuperación']
   },
   {
     id: 'urgencias',
     title: 'Urgencias Odontológicas',
-    subtitle: 'Atención ágil ante dolor o fractura',
-    description: 'Prioridad de turno para situaciones de dolor agudo, piezas fracturadas o pérdida de restauraciones. Asistencia rápida y efectiva.',
+    subtitle: 'Respuesta inmediata ante dolor o fractura',
+    description: 'Prioridad de turno para situaciones de dolor agudo, roturas o pérdida de restauraciones en pleno San Telmo.',
     image: '/images/coral-urgencias.webp',
-    tags: ['Alivio Inmediato', 'Guardia Programada', 'Resolución Rápida']
-  },
-  {
-    id: 'protesis',
-    title: 'Prótesis Dental & Rehabilitación',
-    subtitle: 'Oclusión perfecta y natural',
-    description: 'Coronas estéticas libres de metal en zirconio y disilicato de litio, puentes fijos y prótesis sobre implantes de alta fidelidad.',
-    image: '/images/coral-protesis.webp',
-    tags: ['Coronas en Zirconio', 'Prótesis Fija', 'Rehabilitación Integral']
-  },
-  {
-    id: 'periodoncia',
-    title: 'Periodoncia & Salud Gingival',
-    subtitle: 'Cuidado y prevención del soporte dental',
-    description: 'Tratamiento y control de sangrado de encías, gingivitis y periodontitis mediante limpieza ultrasónica indolora.',
-    image: '/images/coral-periodoncia.webp',
-    tags: ['Profilaxis Ultrasónica', 'Control Periodontal', 'Salud de Encías']
+    tags: ['Alivio Inmediato', 'Guardia de Turno', 'Resolución en el Día']
   }
 ];
 
 export const OBRAS_SOCIALES = [
-  { name: 'Swiss Medical', badge: 'Plan Médico' },
-  { name: 'Galeno', badge: 'Cobertura' },
-  { name: 'Medifé', badge: 'Planes' },
-  { name: 'OMINT', badge: 'Asistencia' },
-  { name: 'AcaSalud', badge: 'Salud Integral' }
+  { name: 'OSDE', badge: 'Planes y Reintegros' },
+  { name: 'Swiss Medical', badge: 'Cobertura Odontológica' },
+  { name: 'Galeno', badge: 'Asistencia y Reintegro' },
+  { name: 'Medifé', badge: 'Planes Médicos' },
+  { name: 'OMINT', badge: 'Salud Integral' }
 ];
 
 export const REVIEWS: Review[] = [
   {
     id: '1',
-    name: 'Carolina M.',
-    date: 'Hace 2 semanas',
+    name: 'Florencia V.',
+    date: 'Hace 1 semana',
     stars: 5,
-    text: 'Excelente profesional el Dr. Juan Pablo Dorrego. Me realicé dos implantes y el proceso fue completamente indoloro, con una dedicación increíble. Además el consultorio en la Torre Coral State tiene unas vistas hermosas que te relajan por completo.',
-    treatment: 'Implantes & Rehabilitación'
+    text: 'Hermoso espacio en pleno San Telmo. Tienen una calidez única para atenderte y me encantó la conciencia ecológica que tienen con los materiales y los residuos. Me hicieron un blanqueamiento y quedé feliz con los resultados.',
+    treatment: 'Blanqueamiento & Limpieza'
   },
   {
     id: '2',
-    name: 'Mariano F.',
-    date: 'Hace 1 mes',
+    name: 'Matías L.',
+    date: 'Hace 3 semanas',
     stars: 5,
-    text: 'Fui por una urgencia con un dolor insoportable y me atendió con una rapidez y amabilidad destacable. Me explicó todo el tratamiento paso a paso y me solucionó el problema en el acto. 100% recomendable.',
-    treatment: 'Urgencia & Endodoncia'
+    text: 'Fui por una urgencia que no me dejaba dormir y me recibieron enseguida en Estados Unidos 693. Cero dolor, explicaciones súper claras de lo que me iban haciendo y un trato super empático. Muy recomendables.',
+    treatment: 'Urgencia & Tratamiento de Conducto'
   },
   {
     id: '3',
-    name: 'Luciana T.',
-    date: 'Hace 2 meses',
+    name: 'Valeria R.',
+    date: 'Hace 1 mes',
     stars: 5,
-    text: 'Hice mi blanqueamiento dental y control periódico acá. Puntualidad impecable en los turnos, instalaciones super modernas y atención personalizada de primer nivel. No cambio de odontólogo nunca más.',
-    treatment: 'Blanqueamiento & Estética'
+    text: 'Me coloqué implantes y coronas sin metal. Desde la primera consulta me explicaron todo con paciencia. Sentís que te cuidan de verdad y no te intentan vender tratamientos innecesarios. El lema de cuidar la sonrisa y el planeta lo cumplen al 100%.',
+    treatment: 'Implantes & Prótesis Zirconio'
   }
 ];
 
 export function getWhatsAppUrl(reason?: string): string {
-  let text = 'Hola Dr. Juan Pablo Dorrego (Espacio Coral)! ';
+  let text = 'Hola Odontología Eco San Telmo! ';
   if (reason) {
     text += `Quisiera consultar información y coordinar un turno para *${reason}*.`;
   } else {
-    text += 'Quisiera consultar por un turno en el consultorio de Torre Coral State.';
+    text += 'Quisiera consultar por disponibilidad de turnos en el consultorio de San Telmo (Estados Unidos 693).';
   }
   return `https://wa.me/${CLINIC_INFO.whatsappRaw}?text=${encodeURIComponent(text)}`;
 }
